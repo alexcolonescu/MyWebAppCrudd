@@ -13,6 +13,10 @@
     <div class="m-2">
         <a class="h3" th:href="@{/users/new}">Add new User</a>
     </div>
+    <div th:if="${message}" class="alert alert-success text-center">
+        [[${message}]]
+
+    </div>
     <div>
         <table class="table table-bordered">
             <thead class="thead-dark">
@@ -22,6 +26,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Action</th>
+
             </tr>
             </thead>
             <tbody>
@@ -31,6 +36,8 @@
                     <td>[[${user.email}]]</td>
                     <td>[[${user.firstName}]]</td>
                     <td>[[${user.lastName}]]</td>
+
+
                 <td>
                     <a class="h4 mr-3" th:href="@{'/users/edit/' + ${user.id}}">Edit</a>
                     <a class="h4" th:href="@{'/users/delete/' + ${user.id}}">Delete</a>
