@@ -15,9 +15,9 @@ public class User {
     @Column(length = 15, nullable = false)
     private String password;
     @Column(length = 45, nullable = false, name = "first_name")
-    private String FirstName;
+    private String firstName;
     @Column(length = 15, nullable = false, name = "last_name")
-    private String LastName;
+    private String lastName;
 
 //    @Column
 //    private boolean enabled;
@@ -49,19 +49,19 @@ public class User {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 //    public boolean isEnabled() {
 //        return enabled;
@@ -77,8 +77,8 @@ public class User {
                 "id=" + id +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
+                ", FirstName='" + firstName + '\'' +
+                ", LastName='" + lastName + '\'' +
                 '}';
     }
 }
